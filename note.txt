@@ -11,15 +11,18 @@
 
 Git command
 --------------------------------------
-git clone <url>
+git clone <url - github>
 ------------------------------------
 1) copy url dari <clone or download> di github
 2) paste url di git bash $git clone <paste url clone di atas>
 3) enter
 4) selepas siap clone, buka C:\moh_java, copy files README.md dalam folder moh_java yang baru dibuat, folder git (dihiddenkan) jadi klik check box bagi hidden items,
 cut folder git dan README.md paste satu level dengan java TOT
-
-
-git add *
-git commit -m "first commit"
-git push
+----------------------------------------------------------------------
+5) git add * <di git bash> -untuk replace note yang asal.. 
+kena start daripada git add, git commit -m "first commit" dan git push
+-----------------------------------------------------------------------
+6) git commit -m "first commit"
+-----------------------------------
+7) git push
+-----------------------------------
