@@ -1,0 +1,20 @@
+----------------------------
+What are Class and Object?
+---------------------------
+Class is a blueprint 
+Object is a result from class
+Cth: Acuan buat kuih bahulu (class), then daripada acuan boleh buat mcam2 kuih bahulu dipanggil dipanggil (object)
+
+----------------------------------
+Apa yang dah belajar dalam METHOD:-
+----------------------------------
+1) Constructor
+2) Overloading - method nama sama, param tak sama
+3) Overriding - replace method
+4) void - digunakan bila kita tak return value, tidak terpakai untuk constructor sahaja
+5) super() - arahan untuk run parent punya constructor 
+6) final terbahagi kepada 2:-
+	i- method - tidak benarkan override ie untuk function gaji-tidak benarkan sesiapa lagi guna function tersebut
+	ii- variable / property - tidak boleh override value
+
+* private tidak akan boleh di inheritance
