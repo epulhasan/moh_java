@@ -49,5 +49,5 @@ INSTALL JAVA WEB - JAVA EE BASE
 ---------------------------------
 NEW PROJECT - untuk Buat WEB
 ------------------------------
-1) New Project > masukkan nama project> simpan dekat C:\\moh_java > Pilih apache tomcat > Server Location and Browse C:\apache-tomcat-9.0.0.M26, pada masa yang sama masukkan 
-username and password > Finish> Next> Next> Finish
+1) New Project > masukkan nama project> simpan dekat C:\\moh_java > Pilih apache tomcat > Server Location and Browse C:\apache-tomcat-9.0.0.M26, pada masa yang sama 
+masukkan username and password > Finish> Next> Next> Finish
