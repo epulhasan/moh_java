@@ -22,3 +22,13 @@ Apa yang dah belajar dalam METHOD:-
 
 - private tidak akan boleh di inheritance
 - variable ada primitive dan non-primitive/class-based, i.e int umur; //primitive dan Book b1; // non-primitve/class-based
+
+i.e
+Class Book{
+	String title; //property
+	void setTitle(String name){ /*
+	   				ini adalah method
+	}			    */ 
+}
+
+Class 1) property(warna kulit, bangsa) 2) method (makan, minum)

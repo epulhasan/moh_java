@@ -1,4 +1,4 @@
-//Package- 
+//Package- susun class lebih teratur dalam folder -nama packages mesti unik
 //1 class boleh ada banyak-banyak constructor
 package chapter4; //step 1
 /* //step 11
