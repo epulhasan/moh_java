@@ -1,0 +1,15 @@
+----------------------
+JAVA DAN DATABASE
+---------------------
+
+1) Install JDBC (Java Database Connectivity) driver 
+- https://dev.mysql.com/downloads/connector/j/-> di dalam dropdown pilih platform independent -> 
+klik Platform Independent (Architecture Independent), ZIP Archive -> skrol ke bawah klik No, thanks
+<selepas dah download>
+-> extract folder yang dah dload -> copy mysql-connector-java-8.0.15.jar di dalam folder tersebut -> masukkan ke dalam Libraries 
+(dalam Netben - caranya, right klik Libraries -> add JAR/Folder -> cari mysql-connector-java-8.0.15.jar -> open)
+
+2) Bila install JDK akan datang sekali dengan Standard Library
+ 		 |- Dalam Standard Library ada banyak jenis packages seperti
+			|- java.lang (String), java.net, java.awt, java.swing, dll dan java.sql (terdiri daripada:-) // dalam packages terdapat banyak class
+											|- Connection, Statement, ResultSet
