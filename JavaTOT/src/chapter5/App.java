@@ -7,5 +7,6 @@ public class App { //step 1
         Person p1 = new Person(); //create object
         p1.name = "John Doe";  //set nama untuk person
         
+        System.out.println(p1.getStatusKahwin("Kanak2"));
     }
 }

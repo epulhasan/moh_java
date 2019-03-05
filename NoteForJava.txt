@@ -32,3 +32,23 @@ Class Book{
 }
 
 Class 1) property(warna kulit, bangsa) 2) method (makan, minum)
+
+---------------------------
+Encapsulation - MESTI ADA:
+---------------------------
+1) private property
+2) public interface (method)
+
+------------------
+Interface
+------------------
+seperti class tanpa ada implementation
+
+		-----------------------------------------------
+			APA BEZA INTERFACE DAN CLASS
+		-----------------------------------------------
+		INTERFACE			CLASS
+ 		----------------		---------------
+Declaration:	public interface		public class
+Inherit:	-				implements Employeer implements Payable
+Implementation:	declaration method shaja	declaration, implementation
