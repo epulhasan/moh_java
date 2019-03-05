@@ -18,8 +18,8 @@ klik Platform Independent (Architecture Independent), ZIP Archive -> skrol ke ba
 4) JEE (Web / Java Enterprises Edition) - Kena ada TOMCAT/Glassfish dll ..ini dipanggil (web/app server). URL: http://tomcat.apache.org/
 					- akan datang dengan library Servlet, JSP, JSF, JPA
 ---------------------------------------------------------------------------------------------------------------------------------
- Install TOMCAT
-------------------
+ Install TOMCAT - untuk run atas web (mozilla)
+------------------------------------
 1) unzip tomcat file yang didload 
 2) copy folder tomcat and paste di c:\\
 3) guna git bash untuk install tomcat 
@@ -32,3 +32,16 @@ klik Platform Independent (Architecture Independent), ZIP Archive -> skrol ke ba
 			  -  di fielad Variable value: masukkan link <C:\Program Files\Java\jdk1.8.0_144> hingga jdk di C:\
 			  -  ok
 5) check berjaya atau tak pergi mozilla: taip http://localhost:8080/ (gambar kucing akan keluar)
+
+----------------------------------------------
+CARA GUNA/COPY FAIL TOMCAT DI WEB
+---------------------------------------------
+1) Copy HelloWorldExample.class dalam folder tomcat yang diinstall -  C:\apache-tomcat-9.0.0.M26\webapps\examples\WEB-INF\classes\HelloWorldExample.class
+2) Paste ke dalam C:\apache-tomcat-9.0.0.M26\webapps\tutorial < sebelum tu buat folder WEB-INF < dan paste HelloWorldExample.class yang dicopy sebelum ini
+3) Copy web.xml dalam folder tomcat yang diinstall -  C:\apache-tomcat-9.0.0.M26\webapps\examples\WEB-INF\web.xml
+4) Paste ke dalam C:\apache-tomcat-9.0.0.M26\webapps\tutorial < folder WEB-INF < dan paste web.xml yang dicopy sebelum ini
+
+-------------------------------
+INSTALL JAVA WEB - JAVA EE BASE
+-------------------------------
+1) Tools > Plugin > Available Plugin > cari JAVA EE BASE > klik checkbox > install macam biasa sampai siap> Java Netbean akan restart balik.
