@@ -18,14 +18,18 @@ public class Filem { //step 1
        // try..catch untuk exception handling/error handling
        // code berada dalam try, catch bila berlaku error
        try{ // step 7
-           con = DriverManager.getConnection("jdbc:mysql://localhost:3306/sakila?useLegacyDatetimeCode=false&serverTimezone=America/New_York","root",""); //step 8 - localhost tgok port di SqlYog - biasanya 3306 dan 3307
+           //step 8 - localhost tgok port di SqlYog - biasanya 3306 dan 3307
+           con = DriverManager.getConnection("jdbc:mysql://localhost:3306/sakila?useLegacyDatetimeCode=false&serverTimezone=America/New_York","root",""); 
            stmt = con.createStatement();
            String sql = "SELECT * FROM film";
            rs = stmt.executeQuery(sql);
-           while(rs.next()){
-               System.out.print(rs.getString("title") + "\t");
+           while(rs.next()){ // bila ada query
+               int id= rs.getInt("film_id"); //cara untuk buat int - getInt
+               System.out.print(id + "\t");
+               System.out.print(rs.getString("title") + "\t"); //cara untuk buat String- getString
                System.out.println(rs.getString("description"));
            }
+           
        }catch(Exception e){ //step 9
            System.out.println("Berlaku Error");//step  10
            System.out.println(e.getMessage()); 
