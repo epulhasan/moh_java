@@ -45,3 +45,9 @@ CARA GUNA/COPY FAIL TOMCAT DI WEB
 INSTALL JAVA WEB - JAVA EE BASE
 -------------------------------
 1) Tools > Plugin > Available Plugin > cari JAVA EE BASE > klik checkbox > install macam biasa sampai siap> Java Netbean akan restart balik.
+
+---------------------------------
+NEW PROJECT - untuk Buat WEB
+------------------------------
+1) New Project > masukkan nama project> simpan dekat C:\\moh_java > Pilih apache tomcat > Server Location and Browse C:\apache-tomcat-9.0.0.M26, pada masa yang sama masukkan 
+username and password > Finish> Next> Next> Finish
