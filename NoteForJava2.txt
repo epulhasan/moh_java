@@ -1,6 +1,6 @@
-----------------------
-JAVA DAN DATABASE
----------------------
+---------------------------------------------------------------------------------
+JAVA DAN DATABASE (for documentation: https://docs.oracle.com/javase/7/docs/api/)
+---------------------------------------------------------------------------------
 
 1) Install JDBC (Java Database Connectivity) driver 
 - https://dev.mysql.com/downloads/connector/j/-> di dalam dropdown pilih platform independent -> 
