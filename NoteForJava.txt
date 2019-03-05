@@ -22,7 +22,7 @@ Apa yang dah belajar dalam METHOD:-
 
 - private tidak akan boleh di inheritance
 - variable ada primitive dan non-primitive/class-based, i.e int umur; //primitive dan Book b1; // non-primitve/class-based
-
+- protectec hanya package yang sama boleh akses . semuanya ada tiga iaitu: public, private, protected
 i.e
 Class Book{
 	String title; //property
