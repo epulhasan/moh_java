@@ -1,8 +1,9 @@
 //1 class ada lebih method
 
 package chapter4; //step 1
-//primitive + String = passing by value
-//object always by reference
+// the type of passing data: 
+//1) primitive + String = passing by value - fotostat
+//2) object always by reference - tidak fotostat
 
 // pass variable by val vs by reference
 public class Student { //step 1 
