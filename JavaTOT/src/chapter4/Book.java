@@ -19,6 +19,7 @@ public class Book { //step 1
          
      }*/
      
+     
      Book(){ // step 3 
          Book.bil = Book.bil + 1;
          System.out.println("Bil buku = " + Book.bil);

@@ -5,16 +5,20 @@ Class is a blueprint
 Object is a result from class
 Cth: Acuan buat kuih bahulu (class), then daripada acuan boleh buat mcam2 kuih bahulu dipanggil dipanggil (object)
 
+- create obj, using new operator
+
 ----------------------------------
 Apa yang dah belajar dalam METHOD:-
 ----------------------------------
-1) Constructor
+1) Constructor - nama method sama dengan class, satu class blh ada multiple constructor yang berbeza parameter
 2) Overloading - method nama sama, param tak sama
-3) Overriding - replace method
+3) Overriding - replace method/ override yang parent -> inheritance
 4) void - digunakan bila kita tak return value, tidak terpakai untuk constructor sahaja
 5) super() - arahan untuk run parent punya constructor 
 6) final terbahagi kepada 2:-
 	i- method - tidak benarkan override ie untuk function gaji-tidak benarkan sesiapa lagi guna function tersebut
-	ii- variable / property - tidak boleh override value
+	ii- variable / property / constant i.e float PI = 3.14 - tidak boleh override value
+7) static - own by class, shared by all obj
 
-* private tidak akan boleh di inheritance
+- private tidak akan boleh di inheritance
+- variable ada primitive dan non-primitive/class-based, i.e int umur; //primitive dan Book b1; // non-primitve/class-based
