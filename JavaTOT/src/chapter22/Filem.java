@@ -1,7 +1,7 @@
 
 package chapter22; //step 1
 //import ini datang daripada JDK yang dah dibuild in
-import com.mysql.cj.xdevapi.Statement; // step 6 akan terhasil bila klik warning daripada step 5
+import java.sql.Statement; // step 6 akan terhasil bila klik warning daripada step 5
 import java.sql.Connection; //terhasil daripada step 8
 import java.sql.DriverManager; // step 6 akan terhasil bila klik warning daripada step 5
 import java.sql.ResultSet; // step 6 akan terhasil bila klik warning daripada step 5
@@ -19,7 +19,13 @@ public class Filem { //step 1
        // code berada dalam try, catch bila berlaku error
        try{ // step 7
            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/sakila?useLegacyDatetimeCode=false&serverTimezone=America/New_York","root",""); //step 8 - localhost tgok port di SqlYog - biasanya 3306 dan 3307
-           
+           stmt = con.createStatement();
+           String sql = "SELECT * FROM film";
+           rs = stmt.executeQuery(sql);
+           while(rs.next()){
+               System.out.print(rs.getString("title") + "\t");
+               System.out.println(rs.getString("description"));
+           }
        }catch(Exception e){ //step 9
            System.out.println("Berlaku Error");//step  10
            System.out.println(e.getMessage()); 
