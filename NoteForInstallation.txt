@@ -1,34 +1,46 @@
 1. download JDK dari oracle website
-
 2. install
 - ini install ke c:\program files\java\jdk...
-
 3. set env variable "path" point ke c:\program files\java\jdk...\bin
-
 4. javac <nama file> java
-
 5. java <nama file>
-
 Git command
---------------------------------------
-git clone <url - github>
-------------------------------------
+---------------------------------------------------------------
+UNTUK BUAT git clone dan download DALAM GITHUB <url - github>
+---------------------------------------------------------------
 1) copy url dari <clone or download> di github
 2) paste url di git bash $git clone <paste url clone di atas>
 3) enter
 4) selepas siap clone, buka C:\moh_java, copy files README.md dalam folder moh_java yang baru dibuat, folder git (dihiddenkan) jadi klik check box bagi hidden items,
 cut folder git dan README.md paste satu level dengan java TOT
-----------------------------------------------------------------------
-5) git add * <di git bash> -untuk replace note yang asal.. 
+----------------------------------
+STEP UNTUK UPLOAD KE DALAM GITHUB
+---------------------------------
+1) git add * <di git bash> -untuk replace note yang asal.. 
 kena start daripada git add, git commit -m "first commit" dan git push
------------------------------------------------------------------------
-6) git commit -m "first commit" <di git bash> 
------------------------------------
-7) git push <di git bash> 
------------------------------------
-8) tukar username $ git config --global --list
-9) $ git config --global user.name "epulhasan"
-10) $ git config --global user.email "epulhasan@gmail.com"
-11) $ git config --global --list
-
-
+2) git commit -m "first commit" <di git bash> 
+3) git push <di git bash> 
+<untuk tukar username dalam github>
+4) tukar username $ git config --global --list
+5) $ git config --global user.name "epulhasan"
+6) $ git config --global user.email "epulhasan@gmail.com"
+7) $ git config --global --list
+------------------------------------------------------------
+STEP UNTUK GITBASH - UNTUK MASUK DALAM FOLDER DAN RUN JAVAC
+------------------------------------------------------------
+1) $ cd /c/moh_java => masuk ke dalam c:\\
+2) $ ls => list kan semua file
+3) $ java -version => untuk check version java
+4) $ javac <nama file "HelloWorld"> => untuk compile fail
+5) $ ls => akan papar class HelloWorld
+----------------------------------------------------------------------------------
+CHECK ENVIRONMENT VARIABLE (jika tak boleh dicompile daripada STEP UNTUK GITBASH)
+----------------------------------------------------------------------------------
+1) Control Panel
+2) System & Security
+3) Advanced System
+4) Masukkan Password (Jika diminta)
+5) Cari PATH dalam kotak kedua < Edit
+6) Copy link C:\Program Files\Java\jdk1.8.0_144\bin
+7) Paste dalam PATH <mesti ada ; dahulu then paste C:\Program Files\Java\jdk1.8.0_144\bin>
+8) Kalau masih tak ok, paste C:\Program Files\Java\jdk1.8.0_144\bin di hadapan sekali

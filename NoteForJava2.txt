@@ -104,6 +104,23 @@ TUKAR PORT TOMCAT - kalau error di netbean menyatakan port telah banyak digunaka
 3) juga kena tukar di Netbean di Tool -> Servers -> tukar kat Server Port 9999
 4) Lepas tu run file index.html di netbean -> akan keluar TODO write content (http://localhost:9999/javaee/index.html) -> telah berjaya
 
------------------------------------------------------
-BELAJAR SERVLET IN DETAIL - USING TOMCAT DALAM NETBEAN
--------------------------------------------------------
+----------------------------------------------------------------------------
+BELAJAR SERVLET (diperkenalkan: 2000) IN DETAIL - USING TOMCAT DALAM NETBEAN
+----------------------------------------------------------------------------
+*Servlet adalah program yang run kat web
+*Dapatkan document JEE:  https://docs.oracle.com/javaee/7/api/toc.htm
+
+<Mulakan Projek:>
+1) Di Netbean ->Javee -> Right Klik -> New -> Servlet -> Masukkan Class Name -> Next -> Next -> Finish
+2) Run files (di netbean mcm biasa) -> akan kluar kotak Hello World
+3) Automatik result keluar di IE (http://localhost:9999/javaee/HelloWorld) -> paparan seperti: Servlet HelloWorld at /javaee
+
+----------------------------------------------------------------------
+UNTUK FILE HTML (di netbean) - MESTI SIMPAN DI DALAM Web Pages FOLDER
+---------------------------------------------------------------------
+1) Right Klik di Web Pages -> New -> HTML -> Masukkan HTML File Name -> Finish
+----------------------------------------------------------------------
+UNTUK SERVLET (di netbean) - MESTI SIMPAN DI DALAM Web Pages FOLDER
+---------------------------------------------------------------------
+1) Right Klik di Javee -> New -> Servlet-> Masukkan Class Name <FilmServlet> -> Next ->  -> Finish
+2) Add Library: Libraries -> Add Library -> Cari MySQL JDBC Driver -> Add/ok -> siap
