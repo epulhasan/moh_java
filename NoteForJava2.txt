@@ -18,8 +18,9 @@ klik Platform Independent (Architecture Independent), ZIP Archive -> skrol ke ba
 4) JEE (Web / Java Enterprises Edition) - Kena ada TOMCAT/Glassfish dll ..ini dipanggil (web/app server). URL: http://tomcat.apache.org/
 					- akan datang dengan library Servlet, JSP, JSF, JPA
 ---------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------
  Install TOMCAT - untuk run atas web (mozilla)
-------------------------------------
+----------------------------------------------
 1) unzip tomcat file yang didload 
 2) copy folder tomcat and paste di c:\\
 3) guna git bash untuk install tomcat 
@@ -48,6 +49,6 @@ INSTALL JAVA WEB - JAVA EE BASE
 
 ---------------------------------
 NEW PROJECT - untuk Buat WEB
-------------------------------
+--------------------------------
 1) New Project > masukkan nama project> simpan dekat C:\\moh_java > Pilih apache tomcat > Server Location and Browse C:\apache-tomcat-9.0.0.M26, pada masa yang sama 
 masukkan username and password > Finish> Next> Next> Finish
