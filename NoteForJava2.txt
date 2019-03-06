@@ -27,7 +27,7 @@ klik Platform Independent (Architecture Independent), ZIP Archive -> skrol ke ba
 	- $ cd /c/apache-tomcat-9.0.0.M26/bin
 	- $ ls
 	- $ ./startup.bat
-4) untuk tambah JAVA_HOME (kalau tomcat tidak berjaya diinstall mlalui git bash) - guna cara Environmetn Variable
+4) untuk tambah JAVA_HOME (kalau tomcat tidak berjaya diinstall mlalui git bash) - guna cara Environment Variable
 			  -  Environment Variable < klik new di bahagian System Variable
 			  -  di field Variable name: masukkan <JAVA_HOME>
 			  -  di fielad Variable value: masukkan link <C:\Program Files\Java\jdk1.8.0_144> hingga jdk di C:\
@@ -35,26 +35,67 @@ klik Platform Independent (Architecture Independent), ZIP Archive -> skrol ke ba
 5) check berjaya atau tak pergi mozilla: taip http://localhost:8080/ (gambar kucing akan keluar)
 
 ----------------------------------------------
-CARA GUNA/COPY FAIL TOMCAT DI WEB-INF
+CARA MANUAL UNTUK RUN TOMCAT (SECARA INTERNAL)
 ---------------------------------------------
-1) Copy HelloWorldExample.class dalam folder tomcat yang diinstall -  C:\apache-tomcat-9.0.0.M26\webapps\examples\WEB-INF\classes\HelloWorldExample.class
-2) Paste ke dalam C:\apache-tomcat-9.0.0.M26\webapps\tutorial < sebelum tu buat folder WEB-INF < dan paste HelloWorldExample.class yang dicopy sebelum ini
+1) Copy HelloWorldExample.class dan .java sekali dalam folder tomcat yang diinstall -  C:\apache-tomcat-9.0.0.M26\webapps\examples\WEB-INF\classes\HelloWorldExample.class dan .java
+2) Paste ke dalam C:\apache-tomcat-9.0.0.M26\webapps\tutorial\classes < sebelum tu buat folder WEB-INF < classes  dan paste HelloWorldExample.class dan .java yang dicopy sebelum ini
 3) Copy web.xml dalam folder tomcat yang diinstall -  C:\apache-tomcat-9.0.0.M26\webapps\examples\WEB-INF\web.xml
 4) Paste ke dalam C:\apache-tomcat-9.0.0.M26\webapps\tutorial < folder WEB-INF < dan paste web.xml yang dicopy sebelum ini
+5) Edit code di fail web.xml biar jadi mcm ni
+	****************************************************************************************************
+	<?xml version="1.0" encoding="UTF-8"?>
 
--------------------------------
-INSTALL JAVA WEB - JAVA EE BASE
--------------------------------
+	<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+ 	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+  	version="4.0"
+ 	 metadata-complete="true">
+
+
+    	<servlet>
+      	<servlet-name>hello</servlet-name>
+      	<servlet-class>Hello</servlet-class>
+    	</servlet>
+
+    	<servlet-mapping>
+      		<servlet-name>hello</servlet-name>
+      		<url-pattern>/hello</url-pattern>
+    	</servlet-mapping>
+	</web-app>
+	******************************************************************************************************
+6) Pergi ke Mozilla -> paste http://localhost:9999/tutorial/hello (akan keluar error -mungkin kita tak ada install library)
+7) Buang source code "ResourceBundle rb = ResourceBundle.getBundle("LocalStrings",request.getLocale()); dan import java.util.ResourceBundle;"
+	di dalam C:\apache-tomcat-9.0.0.M26\webapps\tutorial\WEB-INF\classes\HelloWorldExample.java
+
+  <dalam file yang sama> 
+  -Tukar String title = rb.getString("helloworld.title"); kepada String title = "Hello World";
+8) compile balik kat gitbash
+	- $ cd .. (keluar daripada c)
+	- $ cd webapps/tutorial/WEB-INF/classes/
+	- $ ls
+	- $ javac HelloWorldExample.java
+   untuk run lib baru -> C:\apache-tomcat-9.0.0.M26\lib 
+	-$ javac -cp HelloWorldExample.java
+	-$ javac -cp /c/apache-tomcat-9.0.0.M26/lib/servlet-api.jar HelloWorldExample.java
+	-$ cd /c/apache-tomcat-9.0.0.M26/bin
+	-$ ./startup.bat (run balik)
+  akan run lib baru
+
+            
+-------------------------------------------
+INSTALL JAVA WEB - JAVA EE BASE (di netbean)
+-------------------------------------------
 1) Tools > Plugin > Available Plugin > cari JAVA EE BASE > klik checkbox > install macam biasa sampai siap> Java Netbean akan restart balik.
 
----------------------------------
-NEW PROJECT - untuk Buat WEB
----------------------------------
+-----------------------------------------
+NEW PROJECT - untuk Buat WEB (di netbean)
+------------------------------------------
 1) New Project > masukkan nama project> simpan dekat C:\\moh_java > Pilih apache tomcat > Server Location and Browse C:\apache-tomcat-9.0.0.M26, pada masa yang sama 
 masukkan username and password > Finish> Next> Next> Finish
 
 ---------------------------------------------------------------------------
-TUKAR PORT TOMCAT - kalau error di netbean menyatakan telah banyak digunakan
+TUKAR PORT TOMCAT - kalau error di netbean menyatakan port telah banyak digunakan
 ----------------------------------------------------------------------------
 1) Pergi ke C:\apache-tomcat-9.0.0.M26\conf (semua konfigurasi tomcat ada di sini)
 2) server.xml -> tukar kat port <Connector port="9999" protocol="HTTP/1.1"
@@ -62,3 +103,7 @@ TUKAR PORT TOMCAT - kalau error di netbean menyatakan telah banyak digunakan
                redirectPort="8443" />
 3) juga kena tukar di Netbean di Tool -> Servers -> tukar kat Server Port 9999
 4) Lepas tu run file index.html di netbean -> akan keluar TODO write content (http://localhost:9999/javaee/index.html) -> telah berjaya
+
+-----------------------------------------------------
+BELAJAR SERVLET IN DETAIL - USING TOMCAT DALAM NETBEAN
+-------------------------------------------------------
