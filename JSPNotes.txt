@@ -1,0 +1,23 @@
+-------------------------------------
+JSP - JAVA SERVER PAGES
+-------------------------------------
+- Idea JSP untuk menangani out.println banyak2 untuk html bagi Servlet
+- Lebih kurang PHP
+- Kelemhan JSP: bila letak koding java banyak2 , susah nk debug sebab dah tercampur html dan java
+
+Konsep MVC:
+M - Pojo (plan old java obj) -> Pada masa sama connect ke database (nama model kat belakang)
+V - JSP
+C - Servlet (nama controller kat belakang)
+----------------------------------------------------------------------
+Cara Kerja: untuk studentController.java, student_details.jsp, student
+----------------------------------------------------------------------
+URL: javaee/student
+	|_ studentController, doGet() 
+				|_  Student_details.jsp
+--------------------------------------------------------------------
+UNTUK JSP
+---------------------------------------------------------------------
+1) Right Klik di Javee/Web Pages -> New -> JSP -> Masukkan File Name <cth: arithmetic> -> Finish
+2) untuk template manager JSP : Klik Tools -> Template -> Web -> JSP -> Open In Editor
+
