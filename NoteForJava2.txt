@@ -35,7 +35,7 @@ klik Platform Independent (Architecture Independent), ZIP Archive -> skrol ke ba
 5) check berjaya atau tak pergi mozilla: taip http://localhost:8080/ (gambar kucing akan keluar)
 
 ----------------------------------------------
-CARA GUNA/COPY FAIL TOMCAT DI WEB
+CARA GUNA/COPY FAIL TOMCAT DI WEB-INF
 ---------------------------------------------
 1) Copy HelloWorldExample.class dalam folder tomcat yang diinstall -  C:\apache-tomcat-9.0.0.M26\webapps\examples\WEB-INF\classes\HelloWorldExample.class
 2) Paste ke dalam C:\apache-tomcat-9.0.0.M26\webapps\tutorial < sebelum tu buat folder WEB-INF < dan paste HelloWorldExample.class yang dicopy sebelum ini
@@ -49,6 +49,16 @@ INSTALL JAVA WEB - JAVA EE BASE
 
 ---------------------------------
 NEW PROJECT - untuk Buat WEB
---------------------------------
+---------------------------------
 1) New Project > masukkan nama project> simpan dekat C:\\moh_java > Pilih apache tomcat > Server Location and Browse C:\apache-tomcat-9.0.0.M26, pada masa yang sama 
 masukkan username and password > Finish> Next> Next> Finish
+
+---------------------------------------------------------------------------
+TUKAR PORT TOMCAT - kalau error di netbean menyatakan telah banyak digunakan
+----------------------------------------------------------------------------
+1) Pergi ke C:\apache-tomcat-9.0.0.M26\conf (semua konfigurasi tomcat ada di sini)
+2) server.xml -> tukar kat port <Connector port="9999" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" />
+3) juga kena tukar di Netbean di Tool -> Servers -> tukar kat Server Port 9999
+4) Lepas tu run file index.html di netbean -> akan keluar TODO write content (http://localhost:9999/javaee/index.html) -> telah berjaya
