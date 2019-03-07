@@ -18,10 +18,38 @@ public class Project extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { //step 1 - pastikan ada doGet sahaja
        // ArrayList arr = new models.ProjectModel().getAll(); // guna cara ini jika tak import models.ProjectModel
+        
+        String action = request.getParameter("action"); //step 8 --untuk edit dan delete masa passig
+        if(action != null){
+            int id = Integer.parseInt(request.getParameter("id"));  
+            ProjectModel pro = new ProjectModel();
+                
+            if(action.equals("edit")){
+                //show form with original data
+                pro = pro.getOne(id);
+                request.setAttribute("project", pro); //hantar data melalui project
+                request.getRequestDispatcher("project/form.jsp").forward(request, response);
+            }else if(action.equals("del")){
+                pro.delete(id);
+            }
+        }
         ArrayList list = new ProjectModel().getAll();//step 2 - create object class ProjectModel dan getAll
-   
         request.setAttribute("list", list); //step 5
         request.getRequestDispatcher("project/list.jsp").forward(request, response); //untuk papar di jsp
+    }
+    
+    //step 7
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { //step 1 - pastikan ada doGet sahaja
+       String title = request.getParameter("title");
+       String description = request.getParameter("description");
+       ProjectModel pro = new ProjectModel();
+       pro.setTitle(title);
+       pro.setDescription(description);
+       pro.insert();
+       //another technique - request.getRequestDispatcher("project/list.jsp").forward(request,response);
+       response.sendRedirect("project"); 
+        
     }
 
 }
