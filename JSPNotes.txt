@@ -4,17 +4,37 @@ JSP - JAVA SERVER PAGES
 - Idea JSP untuk menangani out.println banyak2 untuk html bagi Servlet
 - Lebih kurang PHP
 - Kelemhan JSP: bila letak koding java banyak2 , susah nk debug sebab dah tercampur html dan java
+- Apa yang dipelajari:
+	- scriplet <% ... %>
+	- EL ${}
+	- JSP declaration <% ... %>
+	- <%@page include file="" >
+	- <%= print %>
 
 Konsep MVC:
 M - Pojo (plan old java obj) -> Pada masa sama connect ke database (nama model kat belakang)
 V - JSP
 C - Servlet (nama controller kat belakang)
+
+
 ----------------------------------------------------------------------
 Cara Kerja: untuk studentController.java, student_details.jsp, student
 ----------------------------------------------------------------------
 URL: javaee/student
 	|_ studentController, doGet() 
 				|_  Student_details.jsp
+
+--------------------------------------------------------------------------------------------
+Cara Kerja: untuk studentController.java, student_details.jsp, StudentModel.java, Model.java
+--------------------------------------------------------------------------------------------
+
+ALIRAN KERJA:
+		       StudentController.java           StudentModel.java
+<programmer> --------------> Controller---------------------> Model--------------------> database
+	|			      |				    
+	|			      |-------> View (student_details.jsp)
+	|_________________________________________| student_details.jsp akan dibaca oleh <programmer>
+
 --------------------------------------------------------------------
 UNTUK JSP
 ---------------------------------------------------------------------

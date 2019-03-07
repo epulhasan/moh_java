@@ -6,6 +6,7 @@
 
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="model.StudentModel"%>  <!-- kena import-->
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,8 +14,15 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <%
+        StudentModel stud = (StudentModel) request.getAttribute("stud");
+        out.print("Nama Student: " + stud.name);
+        out.print("<br>");
+        out.print("Student ID: " + stud.id);
+        %>
         <h1>Student Details</h1>
-        Name : ${name}
-
+        Name : 
+        <br>
+        ID : 
     </body>
 </html>

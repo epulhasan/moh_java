@@ -1,10 +1,13 @@
+package model;
 
+
+import model.Model;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class StudentModel extends Model {  //inheritance sebab ada extends
-    int id;
-    String name;
+    public int id;
+    public String name;
     
     public StudentModel getOne(int studId){ //ini adalah function
         String sql = "SELECT * FROM film WHERE film_id = " + studId;
