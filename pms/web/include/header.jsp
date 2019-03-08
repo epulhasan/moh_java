@@ -4,6 +4,7 @@
 <% 
    if(session.getAttribute("loggedin") == null) {
        response.sendRedirect("/pms/pub/login.jsp");
+       return;
    }
   
    //Casting - daripada maklumat string kepada UserModel
@@ -18,6 +19,7 @@
         <title>PMS</title>
     </head>
     <body>
-        <h3><%= user.getName() %></h3>(<a href="/pms/login?logout">Logout</a>)
+        <!-- login? akan pergi ker Login.java/doGet - untuk destroy session getName()= function-->
+        <h3><%= user.getName()%></h3>(<a href="/pms/login?logout">Logout</a>)
         <div>&nbsp;</div>
 

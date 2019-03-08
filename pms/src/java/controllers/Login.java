@@ -14,6 +14,13 @@ import models.UserModel;
 
 @WebServlet(name = "Login", urlPatterns = {"/login"})
 public class Login extends HttpServlet {
+    //step 3 -logout
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+      HttpSession session = req.getSession();
+      session.invalidate(); // untuk destroy session
+      res.sendRedirect("/pms/pub/login.jsp");
+    }
 
     
     @Override
@@ -26,7 +33,7 @@ public class Login extends HttpServlet {
             //user wujud, set session then go to project list
             HttpSession sess = req.getSession();
             sess.setAttribute("loggedin", true);
-            sess.setAttribute("user",user); // step2- save an object into session, relate with session logout
+            sess.setAttribute("user",user); // step2-tempat kedua -check session- save an object into session, relate with session logout
             res.sendRedirect("/pms/project");
         }else{
             //user tak wujud, go back to login

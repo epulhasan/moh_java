@@ -11,6 +11,7 @@ public class UserModel extends Model{ //step 1 - inheritance baca file daripada 
     private String pwd;
     private String role;
     private String name;
+    private String gender; //untuk daftar pengguna sistem
 
     public int getId() {
         return id;
@@ -51,7 +52,32 @@ public class UserModel extends Model{ //step 1 - inheritance baca file daripada 
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getGender() { //untuk daftar pengguna sistem .. getter and setter
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
     
+    
+    
+    //step 1 - untuk daftar pengguna sistem
+    public boolean insert() {  //nak tahu berjaya simpan atau tak, guna boolean
+        String sql = "INSERT INTO users(name, pwd, role, gender)"
+                + "VALUES('"+this.name+"','"+this.pwd+"','"+this.role+"','"+this.gender+"')";
+        try {
+            Statement stmt = this.getStmt();
+            stmt.execute(sql); //insert, update, delete guna execute()
+        } catch (Exception e) {
+            e.printStackTrace(); //untuk print error mesej to console
+            return false;
+
+        }
+        return true;
+    }
+
     
     
     //step 2 - return true jika staffId dan pwd matched 
