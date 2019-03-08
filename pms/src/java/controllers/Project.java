@@ -41,15 +41,38 @@ public class Project extends HttpServlet {
     //step 7
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { //step 1 - pastikan ada doGet sahaja
-       String title = request.getParameter("title");
-       String description = request.getParameter("description");
-       ProjectModel pro = new ProjectModel();
-       pro.setTitle(title);
-       pro.setDescription(description);
-       pro.insert();
-       //another technique - request.getRequestDispatcher("project/list.jsp").forward(request,response);
-       response.sendRedirect("project"); 
+       String search = request.getParameter("search"); //untuk searching
+       if(search != null){
+           //search
+           String title = request.getParameter("title");
+           String desc = request.getParameter("description");
+           ProjectModel pro = new ProjectModel();
+           ArrayList list = pro.search(title, desc);
+           request.setAttribute("list", list);
+           request.getRequestDispatcher("project/list.jsp").forward(request,response);
+       }else{
+           //insert dan update
+            String title = request.getParameter("title");
+            String description = request.getParameter("description");
+            String id = request.getParameter("id"); //step 9
+            //System.out.println("id="+id);
+            ProjectModel pro = new ProjectModel();
+            pro.setTitle(title);
+            pro.setDescription(description);
+            
+            if(id.equals("0")){ // step 10 - for update
+                //insert
+                pro.insert();
+            }else{
+                //update
+                int id2 = Integer.parseInt(id);
+                pro.update(id2);
+            }
+            //another technique - request.getRequestDispatcher("project/list.jsp").forward(request,response);
+            response.sendRedirect("project"); 
         
-    }
+        }
+  
+   }
 
 }
