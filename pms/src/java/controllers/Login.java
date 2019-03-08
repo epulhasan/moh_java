@@ -26,6 +26,7 @@ public class Login extends HttpServlet {
             //user wujud, set session then go to project list
             HttpSession sess = req.getSession();
             sess.setAttribute("loggedin", true);
+            sess.setAttribute("user",user); // step2- save an object into session, relate with session logout
             res.sendRedirect("/pms/project");
         }else{
             //user tak wujud, go back to login
