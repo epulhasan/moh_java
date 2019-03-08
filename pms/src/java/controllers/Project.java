@@ -41,7 +41,7 @@ public class Project extends HttpServlet {
     //step 7
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { //step 1 - pastikan ada doGet sahaja
-       String search = request.getParameter("search"); //untuk searching
+       String search = request.getParameter("search"); //step 11- untuk searching
        if(search != null){
            //search
            String title = request.getParameter("title");
