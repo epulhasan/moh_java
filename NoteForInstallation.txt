@@ -44,3 +44,16 @@ CHECK ENVIRONMENT VARIABLE (jika tak boleh dicompile daripada STEP UNTUK GITBASH
 6) Copy link C:\Program Files\Java\jdk1.8.0_144\bin
 7) Paste dalam PATH <mesti ada ; dahulu then paste C:\Program Files\Java\jdk1.8.0_144\bin>
 8) Kalau masih tak ok, paste C:\Program Files\Java\jdk1.8.0_144\bin di hadapan sekali
+-------------------------------------------------------------------------------
+APA YANG AKAN DIGUNAKAN
+-------------------------------------------------------------------------------
+1)jdk-8
+ C://program file/java/jdkl1.8.0.144
+jdk-> java development kit
+jre -> utk running
+2) Netbeans
+3) MYSQL
+4) Xampp
+5) Gitbash
+6) Git
+
